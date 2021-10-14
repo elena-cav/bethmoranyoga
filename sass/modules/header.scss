@@ -1,0 +1,96 @@
+.site-header {
+  .container {
+    background-color: $lightPink;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .logo {
+      a {
+        color: $darkGreen;
+      }
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+
+  .site-header__menu-trigger {
+    cursor: pointer;
+    color: $darkGreen;
+    font-size: 1.2rem;
+    z-index: 101;
+    position: relative;
+
+    &.fa-times {
+      &::after {
+        content: "";
+        z-index: -1;
+        background-color: $pink;
+        position: absolute;
+        width: 400%;
+        height: 100vh;
+        top: -100px;
+        left: -100%;
+      }
+    }
+
+    @media (min-width: 960px) {
+      display: none;
+    }
+    @media (min-width: 530px) {
+      top: 5px;
+      font-size: 1.4rem;
+    }
+  }
+  .site-header__menu {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out,
+      transform 0.3s ease-out;
+    @media (min-width: 960px) {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 0;
+      top: 0;
+    }
+  }
+  .site-header__menu--active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    background: $lightPink;
+    height: 100vh;
+    z-index: 100;
+  }
+  ul {
+    padding-top: 58px;
+    li {
+      color: $darkGreen;
+      a {
+        color: $darkGreen;
+      }
+      text-transform: uppercase;
+      list-style: none;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 10px 0;
+
+      @media (min-width: 960px) {
+        display: inline;
+        margin: 0 10px;
+        font-size: 13px;
+      }
+    }
+  }
+}

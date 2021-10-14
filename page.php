@@ -4,7 +4,7 @@ get_header()
 
 ?>
 
-i am a index
+i am a page
 <?php
 
 

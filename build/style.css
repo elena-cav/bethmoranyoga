@@ -1,0 +1,152 @@
+body {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0.5rem 2rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.site-header .container {
+  background-color: #ffd6e5;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.site-header .container .logo a {
+  color: #21836c;
+}
+.site-header .container .logo h1 {
+  margin: 0;
+}
+.site-header .site-header__menu-trigger {
+  cursor: pointer;
+  color: #21836c;
+  font-size: 1.2rem;
+  z-index: 101;
+  position: relative;
+}
+.site-header .site-header__menu-trigger.fa-times::after {
+  content: "";
+  z-index: -1;
+  background-color: #ffafcc;
+  position: absolute;
+  width: 400%;
+  height: 100vh;
+  top: -100px;
+  left: -100%;
+}
+@media (min-width: 960px) {
+  .site-header .site-header__menu-trigger {
+    display: none;
+  }
+}
+@media (min-width: 530px) {
+  .site-header .site-header__menu-trigger {
+    top: 5px;
+    font-size: 1.4rem;
+  }
+}
+.site-header .site-header__menu {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -20px;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out, transform 0.3s ease-out;
+}
+@media (min-width: 960px) {
+  .site-header .site-header__menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+  }
+}
+.site-header .site-header__menu--active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  background: #ffd6e5;
+  height: 100vh;
+  z-index: 100;
+}
+.site-header ul {
+  padding-top: 58px;
+}
+.site-header ul li {
+  color: #21836c;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.site-header ul li a {
+  color: #21836c;
+}
+@media (min-width: 960px) {
+  .site-header ul li {
+    display: inline;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+}
+
+.parallax {
+  background-image: url("http://bethmoran.localhost/wp-content/uploads/2021/10/13a2e5_d8294fbfeece480283f5ce34b1281306_mv2_d_7952_5304_s_4_2.webp");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-content {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 70vh;
+  display: flex;
+  justify-content: center;
+}
+.parallax-content button {
+  text-transform: uppercase;
+  background-color: #21836c;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease-in-out;
+}
+.parallax-content button:hover {
+  background-color: #3bceac;
+}
+@media screen and (min-width: 840px) {
+  .parallax-content {
+    padding-top: 70vh;
+  }
+}
