@@ -8,13 +8,25 @@
 }
 
 .parallax-content {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
-  color: #fff;
-  padding-top: 90vh;
+  padding-top: 70vh;
+  display: flex;
+  justify-content: center;
+}
+.parallax-content button {
+  text-transform: uppercase;
+  background-color: #21836c;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease-in-out;
+}
+.parallax-content button:hover {
+  background-color: #3bceac;
 }
 @media screen and (min-width: 840px) {
   .parallax-content {
-    padding-top: 80vh;
+    padding-top: 70vh;
   }
 }

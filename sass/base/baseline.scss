@@ -2,7 +2,19 @@ body {
   color: black;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  background-color: #faf9f8fd;
   position: relative;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 button,
@@ -22,4 +34,8 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }

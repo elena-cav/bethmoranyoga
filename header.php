@@ -32,7 +32,9 @@
                             Lesson Example
                         </li>
                         <li>
-                            Testimonials
+                            <a href="<?php
+                                        echo site_url('/testimonials')
+                                        ?>"> Testimonials</a>
                         </li>
 
                         <!-- <li <?php
@@ -49,3 +51,5 @@
             </div>
         </div>
     </header>
+</body>
+<div id="page-anim-preloader"></div>
