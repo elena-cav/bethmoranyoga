@@ -2,15 +2,11 @@
 // $lightBlue: #bde0fe;
 // $blue: #a2d2ff;
 // $darkPurple: #7a36bf;
-$lightPink: #ffd6e5;
-$pink: #ffafcc;
-$green: #3bceac;
-$darkGreen: #21836c;
 
 @import "base/baseline";
-// @import "base/variables";
+@import "base/variables";
 
 @import "modules/header";
-@import "modules/front-page";
+@import "modules/_front-page";
 @import "modules/testimonials";
 @import "modules/footer";

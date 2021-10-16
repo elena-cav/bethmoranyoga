@@ -3,8 +3,11 @@ get_header()
 
 
 ?>
+<div class="container">
 
-i am a page
+
+    i am a page
+</div>
 <?php
 
 

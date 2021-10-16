@@ -1,22 +1,20 @@
-$lightPink: #ffd6e5;
-$pink: #ffafcc;
-$green: #3bceac;
-$darkGreen: #21836c;
+$duration: 0.2s;
+$distance: 15px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 .site-header {
-  .container {
+  .header-container {
     background-color: $lightPink;
-    height: 10vh;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
 
     .logo {
-      a {
-        color: $darkGreen;
-      }
       h1 {
         margin: 0;
+        color: $darkGreen;
       }
     }
   }
@@ -35,7 +33,7 @@ $darkGreen: #21836c;
         background-color: $pink;
         position: absolute;
         width: 400%;
-        height: 100vh;
+        height: calc(100vh + 100px);
         top: -100px;
         left: -100%;
       }
@@ -74,16 +72,15 @@ $darkGreen: #21836c;
     transform: translateY(0);
     visibility: visible;
     background: $lightPink;
-    height: 100vh;
+    height: calc(100vh + 100px);
     z-index: 100;
   }
   ul {
-    padding-top: 58px;
+    padding-top: 1.7rem;
+    padding-left: 1.5rem;
     li {
       color: $darkGreen;
-      a {
-        color: $darkGreen;
-      }
+      transition: all 0.2s ease-in;
       text-transform: uppercase;
       list-style: none;
       font-size: 15px;
@@ -94,6 +91,47 @@ $darkGreen: #21836c;
         display: inline;
         margin: 0 10px;
         font-size: 13px;
+      }
+    }
+    @media (min-width: 960px) {
+      padding: 0;
+    }
+  }
+  a:not(.logolink) {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $green;
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(-$distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY(7.5px);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
       }
     }
   }

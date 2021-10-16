@@ -1,8 +1,11 @@
 @charset "UTF-8";
+html.is--open {
+  overflow: hidden;
+}
+
 body {
   color: black;
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
   background-color: #faf9f8fd;
   position: relative;
   animation: fadeInAnimation ease 1s;
@@ -32,6 +35,7 @@ input[type=reset] {
 
 a {
   text-decoration: inherit;
+  color: inherit;
 }
 
 a:hover {
@@ -42,19 +46,36 @@ li {
   list-style: none;
 }
 
-.site-header .container {
+ul {
+  padding-inline-start: 0;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: "Satisfy", "cursive";
+}
+
+.site-header .header-container {
   background-color: #ffd6e5;
-  height: 10vh;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
-.site-header .container .logo a {
-  color: #21836c;
-}
-.site-header .container .logo h1 {
+.site-header .header-container .logo h1 {
   margin: 0;
+  color: #21836c;
 }
 .site-header .site-header__menu-trigger {
   cursor: pointer;
@@ -69,7 +90,7 @@ li {
   background-color: #ffafcc;
   position: absolute;
   width: 400%;
-  height: 100vh;
+  height: calc(100vh + 100px);
   top: -100px;
   left: -100%;
 }
@@ -110,22 +131,21 @@ li {
   transform: translateY(0);
   visibility: visible;
   background: #ffd6e5;
-  height: 100vh;
+  height: calc(100vh + 100px);
   z-index: 100;
 }
 .site-header ul {
-  padding-top: 58px;
+  padding-top: 1.7rem;
+  padding-left: 1.5rem;
 }
 .site-header ul li {
   color: #21836c;
+  transition: all 0.2s ease-in;
   text-transform: uppercase;
   list-style: none;
   font-size: 15px;
   font-weight: 700;
   margin: 10px 0;
-}
-.site-header ul li a {
-  color: #21836c;
 }
 @media (min-width: 960px) {
   .site-header ul li {
@@ -133,6 +153,43 @@ li {
     margin: 0 10px;
     font-size: 13px;
   }
+}
+@media (min-width: 960px) {
+  .site-header ul {
+    padding: 0;
+  }
+}
+.site-header a:not(.logolink) {
+  position: relative;
+}
+.site-header a:not(.logolink):before, .site-header a:not(.logolink):after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3bceac;
+}
+.site-header a:not(.logolink):before {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+}
+.site-header a:not(.logolink):after {
+  opacity: 0;
+  transform: translateY(7.5px);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+.site-header a:not(.logolink):hover:before, .site-header a:not(.logolink):hover:after, .site-header a:not(.logolink):focus:before, .site-header a:not(.logolink):focus:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.site-header a:not(.logolink):hover:before, .site-header a:not(.logolink):focus:before {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+.site-header a:not(.logolink):hover:after, .site-header a:not(.logolink):focus:after {
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
 
 .parallax {
@@ -147,7 +204,7 @@ li {
 .parallax-content {
   width: 80%;
   margin: 0 auto;
-  padding-top: 70vh;
+  padding-top: calc(100vh - 69.08px - 48px - 49px);
   display: flex;
   justify-content: center;
 }
@@ -162,10 +219,8 @@ li {
 .parallax-content button:hover {
   background-color: #3bceac;
 }
-@media screen and (min-width: 840px) {
-  .parallax-content {
-    padding-top: 70vh;
-  }
+.front-page-content {
+  padding: 0 2rem;
 }
 
 .testimonials {
@@ -277,7 +332,25 @@ li {
 }
 
 footer .links {
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  justify-content: space-evenly;
+  border-top: 1px solid #ffd6e5;
+  padding-top: 0.5rem;
+  padding-bottom: 3.5rem;
+  transition: all 0.2s ease-in;
+}
+@media screen and (min-width: 840px) {
+  footer .links {
+    flex-direction: row;
+  }
+}
+footer .links a:hover {
+  color: #21836c;
 }
 footer .social-bar {
   position: fixed;

@@ -1,12 +1,18 @@
-<?php
-get_header()
+<div class="flex-wrapper">
 
 
-?>
+    <div class="container">
+        <?php
+        get_header()
 
-i am a index
-<?php
+
+        ?>
+
+        i am a index
+    </div>
+    <?php
 
 
-get_footer()
-?>
+    get_footer()
+    ?>
+</div>

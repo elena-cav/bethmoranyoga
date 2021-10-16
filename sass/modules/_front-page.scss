@@ -15,7 +15,7 @@ $darkGreen: #21836c;
 .parallax-content {
   width: 80%;
   margin: 0 auto;
-  padding-top: 70vh;
+  padding-top: calc(100vh - 69.08px - 48px - 49px);
   display: flex;
   justify-content: center;
 
@@ -33,6 +33,10 @@ $darkGreen: #21836c;
   }
 
   @media screen and (min-width: 840px) {
-    padding-top: 70vh;
+    // padding-top: 70vh;
   }
+}
+
+.front-page-content {
+  padding: 0 2rem;
 }
