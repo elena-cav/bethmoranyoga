@@ -1,10 +1,5 @@
-$lightPink: #ffd6e5;
-$pink: #ffafcc;
-$green: #3bceac;
-$darkGreen: #21836c;
-
 .parallax {
-  background-image: url("http://bethmoran.localhost/wp-content/uploads/2021/10/13a2e5_d8294fbfeece480283f5ce34b1281306_mv2_d_7952_5304_s_4_2.webp");
+  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/zen-bear-yoga-IVf7hm88zxY-unsplash-1.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: top;
@@ -15,28 +10,50 @@ $darkGreen: #21836c;
 .parallax-content {
   width: 80%;
   margin: 0 auto;
-  padding-top: calc(100vh - 69.08px - 48px - 49px);
+  padding-top: calc(100vh - 69.08px - 88px - 49px);
   display: flex;
   justify-content: center;
 
   button {
     text-transform: uppercase;
-    background-color: $darkGreen;
+    background-color: $darkPurple;
     color: white;
-    margin-bottom: 15px;
     letter-spacing: 0.1rem;
     transition: all 0.5s ease-in-out;
+    margin-bottom: 56px;
 
     &:hover {
-      background-color: $green;
+      background-color: $purple;
     }
-  }
-
-  @media screen and (min-width: 840px) {
-    // padding-top: 70vh;
   }
 }
 
 .front-page-content {
   padding: 0 2rem;
+
+  .cards-container {
+    height: 15rem;
+    display: flex;
+    width: 100%;
+    column-gap: 0.5rem;
+
+    .card {
+      width: 33%;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    i {
+      font-size: 3rem;
+      color: #191516;
+    }
+    .yellow {
+      background-color: #fcf6bd;
+    }
+    .green {
+      background-color: #ffe0b5;
+    }
+  }
 }

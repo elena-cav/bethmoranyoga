@@ -8,7 +8,7 @@ footer {
     text-transform: uppercase;
     font-size: 0.7rem;
     justify-content: space-evenly;
-    border-top: 1px solid $lightPink;
+    border-top: 1px solid $lightBlue;
     padding-top: 0.5rem;
     padding-bottom: 3.5rem;
     transition: all 0.2s ease-in;
@@ -18,7 +18,7 @@ footer {
     }
     a {
       &:hover {
-        color: $darkGreen;
+        color: $darkPurple;
       }
     }
   }
@@ -36,12 +36,12 @@ footer {
 
     i {
       cursor: pointer;
-      color: $lightPink;
+      color: $lightBlue;
       font-size: 1.2rem;
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: $pink;
+        color: $blue;
       }
     }
   }

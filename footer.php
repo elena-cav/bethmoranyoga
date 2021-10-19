@@ -4,7 +4,7 @@
         <li><a href="<?php
                         echo site_url('/terms-and-conditions')
                         ?>">Classes Terms and Conditions</a></li>
-        <li>My Yoga work</li>
+        <li>My Singing work</li>
         <li>Website made by <a href="https://elena-cavallero.netlify.app/">Elena Cavallero</a> </li>
     </ul>
     <div class='social-bar'>

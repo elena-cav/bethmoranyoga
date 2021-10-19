@@ -18,45 +18,32 @@
             <span class='logo'>
                 <h1><a class='logolink' href="<?php
                                                 echo site_url()
-                                                ?>">Beth Moran</a></h1>
+                                                ?>">Beth Moran <p>YOGA</p></a></h1>
             </span>
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
-            <div class="site-header__menu group">
+            <div class="site-header__menu">
                 <nav class="main-navigation">
-                    <ul>
-                        <li>
-                            <a href="<?php
-                                        echo site_url('/book-now')
-                                        ?>"> Book a lesson</a>
-                        </li>
-                        <li>
-                            <a href="<?php
-                                        echo site_url('/my-teaching-approach')
-                                        ?>"> My Teaching approach</a>
-
+                    <ul class=menu>
+                        <li class='has-sub-menu'>
+                            <p>Practice with me</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="<?php
+                                                echo site_url('/in-person-classes')
+                                                ?>">In person classes</a>
+                                </li>
+                                <li>
+                                    <a href="<?php
+                                                echo site_url('/online-classes')
+                                                ?>">Online classes</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="<?php
                                         echo site_url('/lesson-example')
-                                        ?>">Lesson Example</a>
+                                        ?>">News and Events</a>
                         </li>
-                        <li>
-                            <a href="<?php
-                                        echo site_url('/testimonials')
-                                        ?>">Testimonials</a>
-                        </li>
-                        <li>
-
-                        </li>
-
-                        <!-- <li <?php
-                                    if (is_page("about-us")) echo 'class="current-menu-item"'
-                                    ?>>
-                            <a href="<?php
-                                        echo site_url('/about-us')
-                                        ?>">About Us</a>
-                        </li> -->
-
                     </ul>
                 </nav>
 

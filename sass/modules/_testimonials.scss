@@ -34,10 +34,13 @@
       margin: 0 auto;
       border-radius: 20px;
       text-align: center;
-      box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 10%);
 
       .bubble {
         padding-top: 1rem;
+      }
+
+      .bubble-image {
+        box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 10%);
       }
       .elena {
         display: block;
@@ -60,7 +63,7 @@
             position: absolute;
             top: -0.25em;
             left: -0.5em;
-            color: $pink;
+            color: $purple;
             font-size: 3em;
             font-weight: 600;
             line-height: 1;
@@ -70,7 +73,7 @@
     }
 
     .bubble {
-      background: #f3f4f4f6;
+      background: #f3f4f4f1;
     }
 
     .pointer-img,
@@ -86,10 +89,10 @@
       left: calc(0.5vw - 50px);
     }
     .pointer {
-      background: #f3f4f4f6;
+      background: #f3f4f4f1;
     }
     .info {
-      color: $darkGreen;
+      color: $darkPurple;
       text-align: center;
       p {
         margin: 0.5rem;

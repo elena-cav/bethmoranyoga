@@ -5,8 +5,10 @@
 
 @import "base/baseline";
 @import "base/variables";
+@import "base/mixins";
 
 @import "modules/header";
-@import "modules/_front-page";
+@import "modules/front-page";
 @import "modules/testimonials";
 @import "modules/footer";
+@import "modules/in-person";

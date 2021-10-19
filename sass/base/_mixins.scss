@@ -1,0 +1,27 @@
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin remove-visually-hidden {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: auto;
+  clip-path: none;
+  overflow: initial;
+  white-space: initial;
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
+
+.remove-visually-hidden {
+  @include remove-visually-hidden();
+}
