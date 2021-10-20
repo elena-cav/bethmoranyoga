@@ -4,10 +4,13 @@
     get_header()
     ?>
     <div class="container">
-        I AM INDEX
+        NEWS PAGE
         <?php
+
+
+
         the_title()
-        ?></div>
+        ?> </div>
     <?php
     get_footer()
     ?>

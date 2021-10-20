@@ -16,17 +16,17 @@
     <header class="site-header">
         <div class="header-container">
             <span class='logo'>
-                <h1><a class='logolink' href="<?php
+                <h2><a class='logolink' href="<?php
                                                 echo site_url()
-                                                ?>">Beth Moran <p>YOGA</p></a></h1>
+                                                ?>">Beth Moran <p>YOGA</p></a></h2>
             </span>
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
             <div class="site-header__menu">
                 <nav class="main-navigation">
                     <ul class=menu>
                         <li class='has-sub-menu'>
-                            <p>Practice with me</p>
-                            <ul class="sub-menu">
+                            <a class='has-sub' id="has-sub-menu" href="#.html" role="button">Practice with me</a>
+                            <ul id='sub-menu' class="sub-menu">
                                 <li>
                                     <a href="<?php
                                                 echo site_url('/in-person-classes')
@@ -41,7 +41,7 @@
                         </li>
                         <li>
                             <a href="<?php
-                                        echo site_url('/lesson-example')
+                                        echo site_url('/news-and-events')
                                         ?>">News and Events</a>
                         </li>
                     </ul>
@@ -51,4 +51,3 @@
         </div>
     </header>
 </body>
-<div id="page-anim-preloader"></div>

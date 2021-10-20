@@ -1,6 +1,7 @@
 <div class="flex-wrapper">
 
     <?php
+
     get_header();
     ?>
     <div class="container in-person">
@@ -14,12 +15,15 @@
 
             </div>
             <div class="headline">
-                <h2><?php
+                <h1><?php
                     the_title();
-                    ?></h2>
+                    ?></h1>
                 <p><?php
+
                     the_content();
                     ?></p>
+                <p class='teachonline'>I also teach online!</p>
+                <button class='cta'>Online classes</button>
 
             </div>
         </div>
@@ -58,6 +62,7 @@
 
                                                         ?> </p>
                     <p class=the-content><strong>What:</strong> <?php
+                                                                remove_filter('the_content', 'wpautop');
                                                                 the_content()
                                                                 ?></p>
                 </div>

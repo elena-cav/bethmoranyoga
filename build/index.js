@@ -170,6 +170,8 @@ var MobileMenu = /*#__PURE__*/function () {
     this.menu = document.querySelector(".site-header__menu");
     this.openButton = document.querySelector(".site-header__menu-trigger");
     this.html = document.querySelector("html");
+    this.topmenu = document.getElementById("has-sub-menu");
+    this.submenu = document.getElementById("sub-menu");
     this.events();
   }
 
@@ -181,6 +183,9 @@ var MobileMenu = /*#__PURE__*/function () {
       this.openButton.addEventListener("click", function () {
         return _this.openMenu();
       });
+      this.topmenu.addEventListener("click", function () {
+        return _this.showmenu();
+      });
     }
   }, {
     key: "openMenu",
@@ -189,6 +194,11 @@ var MobileMenu = /*#__PURE__*/function () {
       this.openButton.classList.toggle("fa-times");
       this.html.classList.toggle("is--open");
       this.menu.classList.toggle("site-header__menu--active");
+    }
+  }, {
+    key: "showmenu",
+    value: function showmenu() {
+      this.submenu.classList.toggle("show-sub");
     }
   }]);
 

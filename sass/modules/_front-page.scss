@@ -1,8 +1,8 @@
 .parallax {
-  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/zen-bear-yoga-IVf7hm88zxY-unsplash-1.jpg");
+  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/DSC_0413-1.jpg");
   height: 100%;
   background-attachment: fixed;
-  background-position: top;
+  background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -19,7 +19,7 @@
     background-color: $darkPurple;
     color: white;
     letter-spacing: 0.1rem;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     margin-bottom: 56px;
 
     &:hover {

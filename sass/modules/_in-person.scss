@@ -1,15 +1,32 @@
 .in-person {
-  padding: 0 2rem;
+  padding: 0;
   .banner {
+    // background-color: #fff7eb;
     display: flex;
-    margin-top: 2rem;
-    flex-direction: column;
+    padding: 2rem 0;
+    flex-direction: column-reverse;
     align-items: center;
     column-gap: 2rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border-bottom: 1px solid $lightBlue;
 
     @media (min-width: 960px) {
       flex-direction: row;
+    }
+
+    .headline {
+      text-align: center;
+      padding: 0 1rem 1rem 1rem;
+      .cta {
+        font-size: 0.8rem;
+        border: 2px solid $blue;
+        transition: all 0.2s ease-in-out;
+
+        text-transform: uppercase;
+        &:hover {
+          background-color: $blue;
+        }
+      }
     }
   }
   .thumbnail {
@@ -22,17 +39,23 @@
       position: absolute;
       content: "";
       width: 10vh;
-      border: 3px solid $yellow;
+      border: 3px solid #fff9c2;
       top: -25px;
       right: -38px;
       height: 10vh;
       border-radius: 50%;
-      outline: 2px solid $red;
+      outline: 2px solid $yellow;
       outline-offset: 2px;
     }
   }
   .classes-wrapper {
-    padding: 1rem 0rem;
+    padding: 1rem 1.5rem;
+    @media (min-width: 650px) {
+      padding: 1rem 2rem;
+    }
+    @media (min-width: 960px) {
+      padding: 1rem 7rem;
+    }
     h3 {
       margin: 0.4rem 0;
     }
@@ -53,7 +76,9 @@
       @media (min-width: 960px) {
         align-items: flex-start;
       }
-
+      p {
+        display: inline-block;
+      }
       .the-content {
         display: inline-block;
       }

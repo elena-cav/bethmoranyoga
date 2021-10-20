@@ -13,7 +13,7 @@ html {
 body {
   color: black;
   font-family: "Montserrat", sans-serif;
-  background-color: #faf9f8;
+  background-color: $background;
   position: relative;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
@@ -57,7 +57,13 @@ ul {
 }
 
 .container {
-  padding: 0 16px;
+  padding: 2rem 1.5rem;
+  @media (min-width: 650px) {
+    padding: 2rem 2rem;
+  }
+  @media (min-width: 960px) {
+    padding: 2rem 5rem;
+  }
 }
 
 .flex-wrapper {
@@ -67,6 +73,7 @@ ul {
   justify-content: space-between;
 }
 
-h2 {
+h1 {
   font-family: "Satisfy", "cursive";
+  color: $darkPurple;
 }
