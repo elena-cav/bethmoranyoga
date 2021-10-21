@@ -31,7 +31,7 @@ html.is--open {
 
 body {
   color: black;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #faf9f8;
   position: relative;
   animation: fadeInAnimation ease 1s;
@@ -98,8 +98,9 @@ ul {
 }
 
 h1 {
-  font-family: "Satisfy", "cursive";
+  font-family: "Lora", "cursive";
   color: #7a36bf;
+  font-size: 3rem;
 }
 
 .site-header .header-container {
@@ -111,7 +112,7 @@ h1 {
 }
 .site-header .header-container .logo h2 {
   margin: 0;
-  color: #7a36bf;
+  color: white;
 }
 .site-header .header-container .logo h2 p {
   font-size: 13px;
@@ -289,7 +290,7 @@ nav ul li a:hover:after {
 }
 
 .parallax {
-  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/DSC_0413-1.jpg");
+  background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.4) 95%), url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/DSC_0413-1.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: center left;
@@ -316,32 +317,95 @@ nav ul li a:hover:after {
   background-color: #a06cd5;
 }
 
-.front-page-content {
-  padding: 0 2rem;
+.front-page-content .introduction {
+  display: flex;
+  padding: 2rem 0;
+  background-color: #ebf5ff;
+}
+.front-page-content .introduction .thumbnail {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% center;
+  flex: 20%;
+  margin-right: 0.5rem;
+}
+@media (min-width: 960px) {
+  .front-page-content .introduction .thumbnail {
+    flex: 50%;
+    background-position: center 40%;
+  }
+}
+.front-page-content .introduction .intro-wrapper {
+  background-color: #ebf5ff;
+  padding: 1rem;
+  flex: 50%;
+  line-height: 1.3rem;
+}
+@media (min-width: 650px) {
+  .front-page-content .introduction .intro-wrapper {
+    padding: 2rem 2rem;
+  }
 }
 .front-page-content .cards-container {
-  height: 15rem;
   display: flex;
   width: 100%;
-  column-gap: 0.5rem;
+  flex-direction: column;
+  justify-content: stretch;
+}
+@media (min-width: 650px) {
+  .front-page-content .cards-container {
+    flex-direction: row;
+    height: 15rem;
+    justify-content: center;
+  }
 }
 .front-page-content .cards-container .card {
-  width: 33%;
+  min-height: 190px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.front-page-content .cards-container i {
+@media (min-width: 650px) {
+  .front-page-content .cards-container .card {
+    width: 33.33%;
+  }
+}
+.front-page-content .cards-container .card img {
+  height: 5rem;
+}
+.front-page-content .cards-container .card button {
+  font-size: 0.8rem;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+.front-page-content .cards-container .yellow {
+  background-color: #d7ecfe;
+}
+.front-page-content .cards-container .yellow i {
   font-size: 3rem;
   color: #191516;
 }
-.front-page-content .cards-container .yellow {
-  background-color: #fcf6bd;
+.front-page-content .cards-container .yellow button {
+  border: 2px solid #a2d2ff;
+}
+.front-page-content .cards-container .yellow button:hover {
+  background-color: #a2d2ff;
 }
 .front-page-content .cards-container .green {
-  background-color: #ffe0b5;
+  background-color: #d6bfed;
+  color: white;
+}
+.front-page-content .cards-container .green i {
+  font-size: 3rem;
+  color: white;
+}
+.front-page-content .cards-container .green button {
+  border: 2px solid #a06cd5;
+}
+.front-page-content .cards-container .green button:hover {
+  background-color: #a06cd5;
 }
 
 .testimonials {
@@ -550,6 +614,9 @@ footer .social-bar i:hover {
 .in-person .classes-wrapper {
   padding: 1rem 1.5rem;
 }
+.in-person .classes-wrapper h3 {
+  color: #7a36bf;
+}
 @media (min-width: 650px) {
   .in-person .classes-wrapper {
     padding: 1rem 2rem;
@@ -601,6 +668,8 @@ footer .social-bar i:hover {
   justify-content: left;
   column-gap: 2rem;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 2rem;
 }
 .news-events .post-wrapper {
   position: relative;
@@ -615,7 +684,7 @@ footer .social-bar i:hover {
   font-weight: 600;
 }
 .news-events .post-wrapper .name-news {
-  background-color: #fe5f55;
+  background-color: #f48668;
   color: #faf9f8;
 }
 .news-events .post-wrapper .name-event {
@@ -655,19 +724,63 @@ footer .social-bar i:hover {
 @media screen and (min-width: 840px) {
   .single-event {
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: 2rem;
     row-gap: 1rem;
     align-items: flex-start;
   }
 }
-.single-event .content {
+@media screen and (min-width: 840px) and (min-width: 1000px) {
+  .single-event {
+    column-gap: 3rem;
+  }
+}
+.single-event .event-content {
   flex: 70%;
   text-align: center;
 }
 @media screen and (min-width: 840px) {
-  .single-event .content {
+  .single-event .event-content {
     text-align: left;
   }
+}
+.single-event .event-content .thumbnail {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+  max-width: 90vw;
+}
+.single-event .event-content .thumbnail img {
+  max-width: 80vw;
+}
+.single-event .event-content .thumbnail::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -23px;
+  background: transparent url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/Untitled.svg") no-repeat;
+  width: 70px;
+  height: 70px;
+}
+.single-event .news-content {
+  text-align: center;
+}
+.single-event .news-content .thumbnail {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+}
+.single-event .news-content .thumbnail img {
+  max-width: 80vw;
+}
+.single-event .news-content .thumbnail::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/shape-1.svg");
+  right: -23px;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
 }
 .single-event .details {
   background-color: #d6ebff;

@@ -4,9 +4,11 @@
     get_header()
     ?>
     <div class="container single-event">
-        <div class="content">
+        <div class="news-content">
             <h1><?php the_title() ?></h1>
-            <img src="<?php the_post_thumbnail_url('landscape') ?>" alt="">
+            <div class="thumbnail">
+                <img src="<?php the_post_thumbnail_url('landscape') ?>" alt="">
+            </div>
             <?php
             if (has_excerpt()) {
             ?> <div class="excerpt"> <?php

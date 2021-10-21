@@ -12,7 +12,7 @@ html {
 
 body {
   color: black;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: $background;
   position: relative;
   animation: fadeInAnimation ease 1s;
@@ -74,6 +74,7 @@ ul {
 }
 
 h1 {
-  font-family: "Satisfy", "cursive";
+  font-family: "Lora", "cursive";
   color: $darkPurple;
+  font-size: 3rem;
 }

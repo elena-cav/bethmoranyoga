@@ -1,0 +1,106 @@
+.single-event {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  h1 {
+    margin: 0 0 1rem 0;
+  }
+
+  @media screen and (min-width: 840px) {
+    flex-direction: row;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    align-items: flex-start;
+
+    @media (min-width: 1000px) {
+      column-gap: 3rem;
+    }
+  }
+  .event-content {
+    flex: 70%;
+    text-align: center;
+    @media screen and (min-width: 840px) {
+      text-align: left;
+    }
+    .thumbnail {
+      position: relative;
+      margin-top: 1rem;
+      display: inline-block;
+      max-width: 90vw;
+
+      img {
+        max-width: 80vw;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: -23px;
+        background: transparent
+          url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/Untitled.svg")
+          no-repeat;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+  .news-content {
+    text-align: center;
+
+    .thumbnail {
+      position: relative;
+      margin-top: 1rem;
+      display: inline-block;
+      img {
+        max-width: 80vw;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/shape-1.svg");
+        right: -23px;
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  .details {
+    background-color: #d6ebff;
+    flex: 30%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    .section {
+      border-bottom: 1px solid $purple;
+      font-size: 0.9rem;
+      padding-bottom: 0.2rem;
+    }
+    .title {
+      background: #b890e0;
+      padding: 1rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    button {
+      border: 2px solid $blue;
+      align-self: center;
+
+      transition: all 0.2s ease-in-out;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .excerpt {
+    font-weight: 600;
+  }
+}

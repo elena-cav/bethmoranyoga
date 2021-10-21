@@ -49,6 +49,9 @@
     }
   }
   .classes-wrapper {
+    h3 {
+      color: $darkPurple;
+    }
     padding: 1rem 1.5rem;
     @media (min-width: 650px) {
       padding: 1rem 2rem;

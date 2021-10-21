@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Lora&family=Reenie+Beanie&display=swap" rel="stylesheet">
     <?php wp_head() ?>
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <span class='logo'>
                 <h2><a class='logolink' href="<?php
                                                 echo site_url()
-                                                ?>">Beth Moran <p>YOGA</p></a></h2>
+                                                ?>">BETH MORAN<p>YOGA</p></a></h2>
             </span>
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
             <div class="site-header__menu">
