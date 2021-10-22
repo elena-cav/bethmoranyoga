@@ -83,6 +83,26 @@ function beth_moran_post_types()
     // ));
 }
 
+function pageBanner($args = NULL)
+{
+    if (!$args['title']) {
+
+        $args['title'] = get_the_title();
+    }
+
+?>
+    <div class="banner">
+        <h1><?php
+            echo $args['title'];
+            ?></h1>
+        <p><?php
+            echo $args['subtitle']
+            ?></p>
+    </div>
+<?php
+
+}
+
 add_action('init', 'beth_moran_post_types');
 
 function add_file_types_to_uploads($file_types)

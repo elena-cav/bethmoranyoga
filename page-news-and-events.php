@@ -1,12 +1,12 @@
 <div class="flex-wrapper">
 
     <?php
-    get_header()
+    get_header();
+    pageBanner(array('subtitle' => 'Stay up to date with all my latest events'));
+
     ?>
     <div class="container news-events">
-        <h1><?php
-            the_title()
-            ?> </h1>
+
         <p><?php
             the_content()
             ?> </p>

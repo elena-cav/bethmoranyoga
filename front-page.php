@@ -29,7 +29,8 @@
                         echo $homePage->post_content;
                         ?></p>
                 </div>
-                <div class="thumbnail" style="background-image:url(<?php echo $featured_img_url ?>)">
+                <div class="thumbnail">
+                    <img src="<?php echo $featured_img_url ?>" alt="">
                 </div>
 
 

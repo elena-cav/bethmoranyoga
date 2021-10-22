@@ -33,34 +33,29 @@
   .introduction {
     display: flex;
     padding: 2rem 0;
-    background-color: #ebf5ff;
+    flex-direction: column;
 
-    .thumbnail {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 40% center;
-      flex: 20%;
-      margin-right: 0.5rem;
-      // -webkit-box-shadow: inset 50px 0px 29px -30px rgba(255, 255, 255, 0.44);
-      // box-shadow: inset 50px 0px 29px -30px rgba(255, 255, 255, 0.44);
-
-      @media (min-width: 960px) {
-        flex: 50%;
-        background-position: center 40%;
-      }
-      // @media (min-width: 650px) {
-      //   padding: 2rem 2rem;
-      // }
-      // @media (min-width: 960px) {
-      //   padding: 2rem 5rem;
-      // }
+    @media (min-width: 600px) {
+      flex-direction: row;
+      align-items: center;
     }
+    .thumbnail {
+      opacity: 0;
+      padding-right: 1rem;
+      visibility: hidden;
+      height: 0;
+      img {
+        width: 45vw;
+      }
+      @media (min-width: 600px) {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+      }
+    }
+
     .intro-wrapper {
-      background-color: #ebf5ff;
-      // -webkit-box-shadow: inset -50px 0px 29px -30px rgba(255, 255, 255, 0.44);
-      // box-shadow: inset -50px 0px 29px -30px rgba(255, 255, 255, 0.44);
-      padding: 1rem;
-      flex: 50%;
+      padding: 0rem 1rem;
       line-height: 1.3rem;
       @media (min-width: 650px) {
         padding: 2rem 2rem;
@@ -101,29 +96,29 @@
     }
 
     .yellow {
-      background-color: #d7ecfe;
+      background-color: $blue;
       i {
         font-size: 3rem;
         color: #191516;
       }
       button {
-        border: 2px solid $blue;
+        border: 2px solid $purple;
         &:hover {
-          background-color: $blue;
+          background-color: $purple;
         }
       }
     }
     .green {
-      background-color: #d6bfed;
+      background-color: #81a4aa;
       color: white;
       i {
         font-size: 3rem;
         color: white;
       }
       button {
-        border: 2px solid $purple;
+        border: 2px solid $lightBlue;
         &:hover {
-          background-color: $purple;
+          background-color: $lightBlue;
         }
       }
     }

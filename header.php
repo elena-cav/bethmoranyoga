@@ -16,9 +16,9 @@
     <header class="site-header">
         <div class="header-container">
             <span class='logo'>
-                <h2><a class='logolink' href="<?php
+                <h1><a class='logolink' href="<?php
                                                 echo site_url()
-                                                ?>">BETH MORAN<p>YOGA</p></a></h2>
+                                                ?>">BETH MORAN<p>YOGA</p></a></h1>
             </span>
             <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
             <div class="site-header__menu">

@@ -99,33 +99,88 @@ ul {
 
 h1 {
   font-family: "Lora", "cursive";
-  color: #7a36bf;
+  color: #3c4c63;
   font-size: 3rem;
 }
 
+.banner {
+  z-index: -1;
+  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/b872efdd6f255216a3c8fa1a93db43f8.jpg");
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 7rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  row-gap: 0.5rem;
+  top: 68.8px;
+}
+.banner h1 {
+  position: relative;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+@media (min-width: 530px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+}
+.banner p {
+  font-family: "Lora", "cursive";
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+}
+@media (min-width: 530px) {
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+}
+
 .site-header .header-container {
-  background-color: #bde0fe;
+  background-color: #107975;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   padding: 1rem;
 }
-.site-header .header-container .logo h2 {
-  margin: 0;
+.site-header .header-container .logo a {
   color: white;
 }
-.site-header .header-container .logo h2 p {
+.site-header .header-container .logo h1 {
+  margin: 0;
+}
+.site-header .header-container .logo h1 a {
+  color: white;
+}
+.site-header .header-container .logo h1 p {
   font-size: 13px;
   margin: 0;
 }
-.site-header .header-container .logo h2 .logolink {
+.site-header .header-container .logo h1 .logolink {
   display: flex;
   column-gap: 5px;
   align-items: baseline;
 }
 .site-header .site-header__menu-trigger {
   cursor: pointer;
-  color: #7a36bf;
+  color: #3c4c63;
   font-size: 1.2rem;
   z-index: 101;
   position: relative;
@@ -133,7 +188,7 @@ h1 {
 .site-header .site-header__menu-trigger.fa-times::after {
   content: "";
   z-index: -1;
-  background-color: #a2d2ff;
+  background-color: #d6e8d2;
   position: absolute;
   width: 400%;
   height: calc(100vh + 100px);
@@ -180,7 +235,7 @@ h1 {
   row-gap: 1rem;
 }
 .site-header .site-header__menu .menu li {
-  color: #7a36bf;
+  color: #3c4c63;
   transition: all 0.2s ease-in;
   text-transform: uppercase;
   font-size: 15px;
@@ -240,7 +295,7 @@ h1 {
   }
 }
 .site-header .site-header__menu .sub-menu {
-  background-color: #bde0fe;
+  background-color: #107975;
   position: absolute;
   width: max-content;
   transition: 0.1s ease-out;
@@ -257,7 +312,7 @@ h1 {
   opacity: 1;
   transform: translateX(0);
   visibility: visible;
-  background: #bde0fe;
+  background: #107975;
   height: calc(100vh + 100px);
   z-index: 100;
 }
@@ -281,7 +336,7 @@ nav ul li a:not(.has-sub):after {
   width: 0%;
   content: ".";
   color: transparent;
-  background: #a06cd5;
+  background: #546c8c;
   height: 1px;
 }
 
@@ -307,38 +362,45 @@ nav ul li a:hover:after {
 }
 .parallax-content button {
   text-transform: uppercase;
-  background-color: #7a36bf;
+  background-color: #3c4c63;
   color: white;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
   margin-bottom: 56px;
 }
 .parallax-content button:hover {
-  background-color: #a06cd5;
+  background-color: #546c8c;
 }
 
 .front-page-content .introduction {
   display: flex;
   padding: 2rem 0;
-  background-color: #ebf5ff;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .front-page-content .introduction {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .front-page-content .introduction .thumbnail {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 40% center;
-  flex: 20%;
-  margin-right: 0.5rem;
+  opacity: 0;
+  padding-right: 1rem;
+  visibility: hidden;
+  height: 0;
 }
-@media (min-width: 960px) {
+.front-page-content .introduction .thumbnail img {
+  width: 45vw;
+}
+@media (min-width: 600px) {
   .front-page-content .introduction .thumbnail {
-    flex: 50%;
-    background-position: center 40%;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
   }
 }
 .front-page-content .introduction .intro-wrapper {
-  background-color: #ebf5ff;
-  padding: 1rem;
-  flex: 50%;
+  padding: 0rem 1rem;
   line-height: 1.3rem;
 }
 @media (min-width: 650px) {
@@ -381,20 +443,20 @@ nav ul li a:hover:after {
   text-transform: uppercase;
 }
 .front-page-content .cards-container .yellow {
-  background-color: #d7ecfe;
+  background-color: #d6e8d2;
 }
 .front-page-content .cards-container .yellow i {
   font-size: 3rem;
   color: #191516;
 }
 .front-page-content .cards-container .yellow button {
-  border: 2px solid #a2d2ff;
+  border: 2px solid #546c8c;
 }
 .front-page-content .cards-container .yellow button:hover {
-  background-color: #a2d2ff;
+  background-color: #546c8c;
 }
 .front-page-content .cards-container .green {
-  background-color: #d6bfed;
+  background-color: #81a4aa;
   color: white;
 }
 .front-page-content .cards-container .green i {
@@ -402,10 +464,10 @@ nav ul li a:hover:after {
   color: white;
 }
 .front-page-content .cards-container .green button {
-  border: 2px solid #a06cd5;
+  border: 2px solid #107975;
 }
 .front-page-content .cards-container .green button:hover {
-  background-color: #a06cd5;
+  background-color: #107975;
 }
 
 .testimonials {
@@ -481,7 +543,7 @@ nav ul li a:hover:after {
   position: absolute;
   top: -0.25em;
   left: -0.5em;
-  color: #a06cd5;
+  color: #546c8c;
   font-size: 3em;
   font-weight: 600;
   line-height: 1;
@@ -505,7 +567,7 @@ nav ul li a:hover:after {
   background: #f3f4f4f1;
 }
 .testimonials .testimonial-card .info {
-  color: #7a36bf;
+  color: #3c4c63;
   text-align: center;
 }
 .testimonials .testimonial-card .info p {
@@ -527,7 +589,7 @@ footer .links {
   text-transform: uppercase;
   font-size: 0.7rem;
   justify-content: space-evenly;
-  border-top: 1px solid #bde0fe;
+  border-top: 1px solid #107975;
   padding-top: 0.5rem;
   padding-bottom: 3.5rem;
   transition: all 0.2s ease-in;
@@ -538,7 +600,7 @@ footer .links {
   }
 }
 footer .links a:hover {
-  color: #7a36bf;
+  color: #3c4c63;
 }
 footer .social-bar {
   position: fixed;
@@ -554,43 +616,44 @@ footer .social-bar {
 }
 footer .social-bar i {
   cursor: pointer;
-  color: #bde0fe;
+  color: #107975;
   font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
 }
 footer .social-bar i:hover {
-  color: #a2d2ff;
+  color: #d6e8d2;
 }
 
 .in-person {
   padding: 0;
+  margin-top: 112px;
 }
-.in-person .banner {
+.in-person .introduction {
   display: flex;
   padding: 2rem 0;
   flex-direction: column-reverse;
   align-items: center;
   column-gap: 2rem;
   justify-content: space-evenly;
-  border-bottom: 1px solid #bde0fe;
+  border-bottom: 1px solid #107975;
 }
 @media (min-width: 960px) {
-  .in-person .banner {
+  .in-person .introduction {
     flex-direction: row;
   }
 }
-.in-person .banner .headline {
+.in-person .introduction .headline {
   text-align: center;
   padding: 0 1rem 1rem 1rem;
 }
-.in-person .banner .headline .cta {
+.in-person .introduction .headline .cta {
   font-size: 0.8rem;
-  border: 2px solid #a2d2ff;
+  border: 2px solid #d6e8d2;
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
 }
-.in-person .banner .headline .cta:hover {
-  background-color: #a2d2ff;
+.in-person .introduction .headline .cta:hover {
+  background-color: #d6e8d2;
 }
 .in-person .thumbnail {
   position: relative;
@@ -615,7 +678,7 @@ footer .social-bar i:hover {
   padding: 1rem 1.5rem;
 }
 .in-person .classes-wrapper h3 {
-  color: #7a36bf;
+  color: #3c4c63;
 }
 @media (min-width: 650px) {
   .in-person .classes-wrapper {
@@ -636,14 +699,14 @@ footer .social-bar i:hover {
 .in-person .classes-wrapper .class-wrapper {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #a06cd5;
+  border-bottom: 1px solid #546c8c;
   align-items: center;
 }
 .in-person .classes-wrapper .class-wrapper a {
   transition: all 0.2s ease-in-out;
 }
 .in-person .classes-wrapper .class-wrapper a:hover {
-  color: #7a36bf;
+  color: #3c4c63;
 }
 @media (min-width: 960px) {
   .in-person .classes-wrapper .class-wrapper {
@@ -659,6 +722,7 @@ footer .social-bar i:hover {
 
 .news-events {
   flex-grow: 1;
+  margin-top: 112px;
 }
 .news-events p {
   font-size: 0.8rem;
@@ -684,12 +748,12 @@ footer .social-bar i:hover {
   font-weight: 600;
 }
 .news-events .post-wrapper .name-news {
-  background-color: #f48668;
+  background-color: #ec6923;
   color: #faf9f8;
 }
 .news-events .post-wrapper .name-event {
   background-color: #fff275;
-  color: #7a36bf;
+  color: #3c4c63;
 }
 .news-events .post-wrapper img {
   transition: all 0.2s ease-in-out;
@@ -790,7 +854,7 @@ footer .social-bar i:hover {
   flex-direction: column;
 }
 .single-event .details .section {
-  border-bottom: 1px solid #a06cd5;
+  border-bottom: 1px solid #546c8c;
   font-size: 0.9rem;
   padding-bottom: 0.2rem;
 }
@@ -801,14 +865,14 @@ footer .social-bar i:hover {
   font-weight: 600;
 }
 .single-event .details button {
-  border: 2px solid #a2d2ff;
+  border: 2px solid #d6e8d2;
   align-self: center;
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 .single-event .details button:hover {
-  background-color: #a2d2ff;
+  background-color: #d6e8d2;
 }
 .single-event .excerpt {
   font-weight: 600;

@@ -3,11 +3,12 @@
     <?php
 
     get_header();
+    pageBanner(array());
     ?>
     <div class="container in-person">
         <?php
         ?>
-        <div class='banner'>
+        <div class='introduction'>
             <div class="thumbnail">
                 <img src=" <?php
                             the_post_thumbnail_url('bannerPortrait');
@@ -15,13 +16,9 @@
 
             </div>
             <div class="headline">
-                <h1><?php
-                    the_title();
-                    ?></h1>
-                <p><?php
-
-                    the_content();
-                    ?></p>
+                <div><?php
+                        the_content();
+                        ?></div>
                 <p class='teachonline'>I also teach online!</p>
                 <button class='cta'>Online classes</button>
 

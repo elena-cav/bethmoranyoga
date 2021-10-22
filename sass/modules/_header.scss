@@ -11,9 +11,14 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 1rem;
 
     .logo {
-      h2 {
-        margin: 0;
+      a {
         color: white;
+      }
+      h1 {
+        margin: 0;
+        a {
+          color: white;
+        }
         p {
           font-size: 13px;
           margin: 0;
