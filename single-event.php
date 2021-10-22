@@ -1,7 +1,9 @@
 <div class="flex-wrapper">
 
     <?php
-    get_header()
+    get_header();
+    pageBanner();
+
     ?>
     <div class="container single-event">
         <div class="event-content">
@@ -13,8 +15,8 @@
                     ?> <div class="excerpt"> <?php
                                                 the_excerpt();
                                                 ?></div> <?php
-                                                }
-                                                    ?>
+                                                        }
+                                                            ?>
             <p><?php the_content() ?></p>
         </div>
         <div class="details">
