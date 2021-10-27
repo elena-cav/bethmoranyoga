@@ -24,7 +24,7 @@
             $my_posts = array_merge(get_posts($newslist_args), get_posts($events_args));
             usort($my_posts, function ($post_a, $post_b) {
                 // Compare the post_date of the posts, and if $post_b is newer, then it will be displayed first
-                return $post_a->post_date <=> $post_b->post_date;
+                return $post_b->post_date <=> $post_a->post_date;
             });
             foreach ($my_posts as $post) : setup_postdata($post);
 
@@ -44,7 +44,6 @@
                                                     echo $name;
                                                     ?></p>
                         <div class="info-wrapper">
-
                             <p class='title'><?php
                                                 the_title()
                                                 ?></p>

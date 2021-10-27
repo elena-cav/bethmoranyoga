@@ -60,6 +60,10 @@
                 </div>
             </div>
         </div>
+        <div class="newsletter">
+            <div class="ml-form-embed" data-account="3523577:s5r9n2p0x6" data-form="4901483:w3j5b3">
+            </div>
+        </div>
     </div>
     <?php
     get_footer();

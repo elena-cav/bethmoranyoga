@@ -9,7 +9,7 @@
     </ul>
     <div class='social-bar'>
         <a href="https://www.instagram.com/bethrmoran/"><i class="fa fa-instagram"></i></a>
-        <i aria-hidden="true" class="fa fa-envelope"></i>
+        <a href="mailto:bethanymoran@hotmail.co.uk"><i aria-hidden="true" class="fa fa-envelope"></i></a>
     </div>
 </footer>
 

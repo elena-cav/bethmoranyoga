@@ -20,7 +20,9 @@
                         the_content();
                         ?></div>
                 <p class='teachonline'>I also teach online!</p>
-                <button class='cta'>Online classes</button>
+                <button class='cta'><a href="<?php
+                                                echo site_url('/online-classes')
+                                                ?>">Online classes</a></button>
 
             </div>
         </div>
@@ -58,6 +60,9 @@
                                                         the_field('time');
 
                                                         ?> </p>
+                    <p><strong>Duration:</strong> <?php
+                                                    the_field('duration')
+                                                    ?></p>
                     <p class=the-content><strong>What:</strong> <?php
                                                                 remove_filter('the_content', 'wpautop');
                                                                 the_content()
