@@ -12,7 +12,7 @@ html {
 
 body {
   color: black;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: $background;
   position: relative;
   animation: fadeInAnimation ease 1s;
@@ -29,8 +29,8 @@ body {
 }
 
 button,
-input[type="submit"],
-input[type="reset"] {
+input[type='submit'],
+input[type='reset'] {
   background: none;
   color: inherit;
   border: none;
@@ -74,14 +74,14 @@ ul {
 }
 
 h1 {
-  font-family: "Lora", "cursive";
+  font-family: 'Lora', 'cursive';
   color: $darkPurple;
   font-size: 3rem;
 }
 
 .banner {
   z-index: -1;
-  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/b872efdd6f255216a3c8fa1a93db43f8.jpg");
+  background-image: url('https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/b872efdd6f255216a3c8fa1a93db43f8.jpg');
   position: absolute;
   display: flex;
   align-items: center;
@@ -105,7 +105,7 @@ h1 {
     }
   }
   p {
-    font-family: "Lora", "cursive";
+    font-family: 'Lora', 'cursive';
     position: relative;
     color: white;
     font-size: 1rem;
@@ -116,7 +116,7 @@ h1 {
   }
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

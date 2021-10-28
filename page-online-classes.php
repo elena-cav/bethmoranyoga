@@ -1,12 +1,14 @@
 <div class="flex-wrapper">
 
     <?php
-    get_header()
+    get_header();
+    pageBanner(array('subtitle' => 'Join me from anywhere you are'));
+
     ?>
-    <div class="container">
+    <div class="container online-classes">
 
         <?php
-        the_title()
+        the_content();
         ?></div>
     <?php
     get_footer()

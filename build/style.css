@@ -104,7 +104,7 @@ h1 {
 
 .banner {
   z-index: -1;
-  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/b872efdd6f255216a3c8fa1a93db43f8.jpg");
+  background-image: url("https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/b872efdd6f255216a3c8fa1a93db43f8.jpg");
   position: absolute;
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@ h1 {
 }
 
 .site-header .header-container {
-  background-color: #107975;
+  background-color: #d6e8d2;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -187,7 +187,7 @@ h1 {
 .site-header .site-header__menu-trigger.fa-times::after {
   content: "";
   z-index: -1;
-  background-color: #d6e8d2;
+  background-color: #107975;
   position: absolute;
   width: 400%;
   height: calc(100vh + 100px);
@@ -294,7 +294,7 @@ h1 {
   }
 }
 .site-header .site-header__menu .sub-menu {
-  background-color: #107975;
+  background-color: #d6e8d2;
   position: absolute;
   width: max-content;
   transition: 0.1s ease-out;
@@ -311,7 +311,7 @@ h1 {
   opacity: 1;
   transform: translateX(0);
   visibility: visible;
-  background: #107975;
+  background: #d6e8d2;
   height: calc(100vh + 100px);
   z-index: 100;
 }
@@ -344,7 +344,7 @@ nav ul li a:hover:after {
 }
 
 .parallax {
-  background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.4) 95%), url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/DSC_0413-1.jpg");
+  background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.4) 95%), url("https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/DSC_0413-1.jpg");
   height: 100%;
   background-attachment: fixed;
   background-position: center left;
@@ -442,7 +442,7 @@ nav ul li a:hover:after {
   text-transform: uppercase;
 }
 .front-page-content .cards-container .yellow {
-  background-color: #d6e8d2;
+  background-color: #107975;
 }
 .front-page-content .cards-container .yellow i {
   font-size: 3rem;
@@ -463,10 +463,10 @@ nav ul li a:hover:after {
   color: white;
 }
 .front-page-content .cards-container .green button {
-  border: 2px solid #107975;
+  border: 2px solid #d6e8d2;
 }
 .front-page-content .cards-container .green button:hover {
-  background-color: #107975;
+  background-color: #d6e8d2;
 }
 
 .newsletter {
@@ -481,7 +481,7 @@ footer .links {
   text-transform: uppercase;
   font-size: 0.7rem;
   justify-content: space-evenly;
-  border-top: 1px solid #107975;
+  border-top: 1px solid #d6e8d2;
   padding-top: 1rem;
   padding-bottom: 3.5rem;
   transition: all 0.2s ease-in;
@@ -508,12 +508,12 @@ footer .social-bar {
 }
 footer .social-bar i {
   cursor: pointer;
-  color: #107975;
+  color: #d6e8d2;
   font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
 }
 footer .social-bar i:hover {
-  color: #d6e8d2;
+  color: #107975;
 }
 
 .in-person {
@@ -527,7 +527,7 @@ footer .social-bar i:hover {
   align-items: center;
   column-gap: 2rem;
   justify-content: space-evenly;
-  border-bottom: 1px solid #107975;
+  border-bottom: 1px solid #d6e8d2;
 }
 @media (min-width: 960px) {
   .in-person .introduction {
@@ -540,12 +540,12 @@ footer .social-bar i:hover {
 }
 .in-person .introduction .headline .cta {
   font-size: 0.8rem;
-  border: 2px solid #d6e8d2;
+  border: 2px solid #107975;
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
 }
 .in-person .introduction .headline .cta:hover {
-  background-color: #d6e8d2;
+  background-color: #107975;
 }
 .in-person .thumbnail {
   position: relative;
@@ -717,7 +717,7 @@ footer .social-bar i:hover {
   position: absolute;
   top: -20px;
   right: -23px;
-  background: transparent url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/Untitled.svg") no-repeat;
+  background: transparent url("https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/Untitled.svg") no-repeat;
   width: 70px;
   height: 70px;
 }
@@ -736,7 +736,7 @@ footer .social-bar i:hover {
   content: "";
   position: absolute;
   top: -20px;
-  background-image: url("http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/shape-1.svg");
+  background-image: url("https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/shape1.svg");
   right: -23px;
   background-repeat: no-repeat;
   width: 80px;
@@ -762,15 +762,20 @@ footer .social-bar i:hover {
   font-weight: 600;
 }
 .single-event .details button {
-  border: 2px solid #d6e8d2;
+  border: 2px solid #107975;
   align-self: center;
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
 .single-event .details button:hover {
-  background-color: #d6e8d2;
+  background-color: #107975;
 }
 .single-event .excerpt {
   font-weight: 600;
+}
+
+.online-classes {
+  flex-grow: 1;
+  margin-top: 112px;
 }

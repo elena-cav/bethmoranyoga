@@ -20,8 +20,8 @@
         <div class="front-page-content">
             <div class="introduction">
                 <?php
-                $homePage = get_post(57);
-                $featured_img_url = get_the_post_thumbnail_url(57, 'full');
+                $homePage = get_post(59);
+                $featured_img_url = get_the_post_thumbnail_url(59, 'full');
                 ?>
                 <div class="intro-wrapper">
                     <h1>Hi, I'm Beth</h1>
@@ -37,7 +37,7 @@
             </div>
             <div class="cards-container">
                 <div class="card yellow">
-                    <img src="http://yoga.bethmoran.localhost/wp-content/uploads/sites/2/2021/10/6643378_diet_fitness_meditation_retreat_yoga_icon.png" alt="">
+                    <img src="https://bethmoranyoga.co.uk/wp-content/uploads/2021/10/6643378_diet_fitness_meditation_retreat_yoga_icon.png" alt="">
                     <p>Find out where I teach</p>
                     <button><a href="<?php
                                         echo site_url('/in-person-classes')
