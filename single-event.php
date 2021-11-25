@@ -7,7 +7,6 @@
     ?>
     <div class="container single-event">
         <div class="event-content">
-            <h1><?php the_title() ?></h1>
             <div class="thumbnail">
                 <img src="<?php the_post_thumbnail_url('landscape') ?>" alt="">
             </div> <?php

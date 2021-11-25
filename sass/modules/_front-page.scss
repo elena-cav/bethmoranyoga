@@ -17,14 +17,15 @@
 
   button {
     text-transform: uppercase;
-    background-color: $darkPurple;
+    background-color: $darkBlue;
     color: white;
     letter-spacing: 0.1rem;
     transition: all 0.2s ease-in-out;
     margin-bottom: 56px;
 
     &:hover {
-      background-color: $purple;
+      background-color: $lightBlue;
+      color: black;
     }
   }
 }
@@ -96,20 +97,24 @@
     }
 
     .yellow {
-      background-color: $blue;
+      background-color: $lightBlue;
       i {
         font-size: 3rem;
         color: #191516;
       }
       button {
-        border: 2px solid $purple;
+        border: 2px solid $darkBlue;
         &:hover {
-          background-color: $purple;
+          background-color: $darkBlue;
+          color: white;
+        }
+        a:hover {
+          color: white;
         }
       }
     }
     .green {
-      background-color: #81a4aa;
+      background-color: $darkBlue;
       color: white;
       i {
         font-size: 3rem;
@@ -119,6 +124,10 @@
         border: 2px solid $lightBlue;
         &:hover {
           background-color: $lightBlue;
+          color: black;
+        }
+        a:hover {
+          color: black;
         }
       }
     }

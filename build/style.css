@@ -98,7 +98,7 @@ ul {
 
 h1 {
   font-family: "Lora", "cursive";
-  color: #3c4c63;
+  color: #107975;
   font-size: 3rem;
 }
 
@@ -179,10 +179,13 @@ h1 {
 }
 .site-header .site-header__menu-trigger {
   cursor: pointer;
-  color: #3c4c63;
+  color: #107975;
   font-size: 1.2rem;
   z-index: 101;
   position: relative;
+}
+.site-header .site-header__menu-trigger.fa-times {
+  color: white;
 }
 .site-header .site-header__menu-trigger.fa-times::after {
   content: "";
@@ -234,7 +237,7 @@ h1 {
   row-gap: 1rem;
 }
 .site-header .site-header__menu .menu li {
-  color: #3c4c63;
+  color: #107975;
   transition: all 0.2s ease-in;
   text-transform: uppercase;
   font-size: 15px;
@@ -335,7 +338,7 @@ nav ul li a:not(.has-sub):after {
   width: 0%;
   content: ".";
   color: transparent;
-  background: #546c8c;
+  background: #107975;
   height: 1px;
 }
 
@@ -361,14 +364,15 @@ nav ul li a:hover:after {
 }
 .parallax-content button {
   text-transform: uppercase;
-  background-color: #3c4c63;
+  background-color: #107975;
   color: white;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
   margin-bottom: 56px;
 }
 .parallax-content button:hover {
-  background-color: #546c8c;
+  background-color: #d6e8d2;
+  color: black;
 }
 
 .front-page-content .introduction {
@@ -442,20 +446,24 @@ nav ul li a:hover:after {
   text-transform: uppercase;
 }
 .front-page-content .cards-container .yellow {
-  background-color: #107975;
+  background-color: #d6e8d2;
 }
 .front-page-content .cards-container .yellow i {
   font-size: 3rem;
   color: #191516;
 }
 .front-page-content .cards-container .yellow button {
-  border: 2px solid #546c8c;
+  border: 2px solid #107975;
 }
 .front-page-content .cards-container .yellow button:hover {
-  background-color: #546c8c;
+  background-color: #107975;
+  color: white;
+}
+.front-page-content .cards-container .yellow button a:hover {
+  color: white;
 }
 .front-page-content .cards-container .green {
-  background-color: #81a4aa;
+  background-color: #107975;
   color: white;
 }
 .front-page-content .cards-container .green i {
@@ -467,6 +475,10 @@ nav ul li a:hover:after {
 }
 .front-page-content .cards-container .green button:hover {
   background-color: #d6e8d2;
+  color: black;
+}
+.front-page-content .cards-container .green button a:hover {
+  color: black;
 }
 
 .newsletter {
@@ -492,7 +504,7 @@ footer .links {
   }
 }
 footer .links a:hover {
-  color: #3c4c63;
+  color: #107975;
 }
 footer .social-bar {
   position: fixed;
@@ -570,7 +582,7 @@ footer .social-bar i:hover {
   padding: 1rem 1.5rem;
 }
 .in-person .classes-wrapper h3 {
-  color: #3c4c63;
+  color: #107975;
 }
 @media (min-width: 650px) {
   .in-person .classes-wrapper {
@@ -591,14 +603,14 @@ footer .social-bar i:hover {
 .in-person .classes-wrapper .class-wrapper {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #546c8c;
+  border-bottom: 1px solid #107975;
   align-items: center;
 }
 .in-person .classes-wrapper .class-wrapper a {
   transition: all 0.2s ease-in-out;
 }
 .in-person .classes-wrapper .class-wrapper a:hover {
-  color: #3c4c63;
+  color: #107975;
 }
 @media (min-width: 960px) {
   .in-person .classes-wrapper .class-wrapper {
@@ -646,7 +658,7 @@ footer .social-bar i:hover {
 }
 .news-events .post-wrapper .name-event {
   background-color: #fff275;
-  color: #3c4c63;
+  color: #107975;
 }
 .news-events .post-wrapper img {
   transition: all 0.2s ease-in-out;
@@ -743,20 +755,20 @@ footer .social-bar i:hover {
   height: 80px;
 }
 .single-event .details {
-  background-color: #d6ebff;
+  background-color: #d6e8d2;
   flex: 30%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
 }
 .single-event .details .section {
-  border-bottom: 1px solid #546c8c;
+  border-bottom: 1px solid #107975;
   font-size: 0.9rem;
   padding-bottom: 0.2rem;
   margin: 0.3rem 0;
 }
 .single-event .details .title {
-  background: #b890e0;
+  background: #107975;
   padding: 1rem;
   color: white;
   font-weight: 600;
@@ -770,9 +782,16 @@ footer .social-bar i:hover {
 }
 .single-event .details button:hover {
   background-color: #107975;
+  color: white;
 }
 .single-event .excerpt {
   font-weight: 600;
+}
+
+@media screen and (min-width: 840px) {
+  .news {
+    justify-content: center;
+  }
 }
 
 .online-classes {

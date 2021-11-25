@@ -90,6 +90,12 @@ function pageBanner($args = NULL)
         $args['title'] = get_the_title();
     }
 
+    if (!$args['subtitle']) {
+        if (has_excerpt()) {
+            $args['subtitle'] = get_the_excerpt();
+        }
+    }
+
 ?>
     <div class="banner">
         <h1><?php

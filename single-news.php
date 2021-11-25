@@ -5,7 +5,7 @@
     pageBanner();
 
     ?>
-    <div class="container single-event">
+    <div class="container news single-event">
         <div class="news-content">
             <div class="thumbnail">
                 <img src="<?php the_post_thumbnail_url('landscape') ?>" alt="">

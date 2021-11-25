@@ -20,12 +20,12 @@
       padding: 0 1rem 1rem 1rem;
       .cta {
         font-size: 0.8rem;
-        border: 2px solid $blue;
+        border: 2px solid $darkBlue;
         transition: all 0.2s ease-in-out;
 
         text-transform: uppercase;
         &:hover {
-          background-color: $blue;
+          background-color: $darkBlue;
         }
       }
     }
@@ -38,7 +38,7 @@
     }
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       width: 10vh;
       border: 3px solid #fff9c2;
       top: -25px;
@@ -51,7 +51,7 @@
   }
   .classes-wrapper {
     h3 {
-      color: $darkPurple;
+      color: $darkBlue;
     }
     padding: 1rem 1.5rem;
     @media (min-width: 650px) {
@@ -70,12 +70,12 @@
       a {
         transition: all 0.2s ease-in-out;
         &:hover {
-          color: $darkPurple;
+          color: $darkBlue;
         }
       }
       display: flex;
       flex-direction: column;
-      border-bottom: 1px solid $purple;
+      border-bottom: 1px solid $darkBlue;
       align-items: center;
       @media (min-width: 960px) {
         align-items: flex-start;
